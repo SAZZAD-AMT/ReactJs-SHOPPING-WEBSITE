@@ -1,0 +1,150 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Styles for the entire app container */
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Content wrapper for products and cart */
+.content {
+  display: flex;
+  flex-direction: row; /* Display products and cart side by side */
+  flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+  justify-content: space-between; /* Add space between products and cart */
+  align-items: flex-start; /* Align cart to the top */
+  margin-top: 20px; /* Add space between header and content */
+}
+
+/* Styles for the products section */
+.products {
+  flex: 2; /* Products take up 2/3 of the available width */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styles for individual product items */
+.product {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: calc(33.33% - 20px); /* 3 products per row */
+  margin-bottom: 20px;
+}
+
+.product h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.product p {
+  margin: 10px 0;
+}
+
+.product .price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.product button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for the shopping cart */
+.cart {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  flex: 1; /* Cart takes up 1/3 of the available width */
+  margin-left: 20px; /* Add space between products and cart */
+}
+
+.cart h2 {
+  font-size: 24px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.cart .total {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.cart button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cart button:hover {
+  background-color: #e35e55;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .App {
+    align-items: center; /* Center content vertically */
+  }
+
+  .cart {
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  .product {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
